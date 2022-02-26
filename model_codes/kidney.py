@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import joblib
 
-df = pd.read_csv("../data/kidney.csv")
+df = pd.read_csv(r"C:\Users\ayshwarya\Downloads\Health-App-main\data\kidney.csv")
 
 df[['htn','dm','cad','pe','ane']] = df[['htn','dm','cad','pe','ane']].replace(to_replace={'yes':1,'no':0})
 df[['rbc','pc']] = df[['rbc','pc']].replace(to_replace={'abnormal':1,'normal':0})
@@ -39,4 +39,4 @@ print("---------------------")
 print(clf_report)
 print("_____________________")
 
-joblib.dump(model,r"C:\Users\Mahesh Sharma\Desktop\HealthApp\Indivisual_Deployment\Kidney_API\kidney_model.pkl")
+joblib.dump(model,r"C:\Users\ayshwarya\Downloads\Health-App-main\Heart_API\kidney_model.pkl")

@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import joblib
 
-df = pd.read_csv(r"C:\Users\Mahesh Sharma\Desktop\HealthApp\data\cancer.csv")
+df = pd.read_csv(r"C:\Users\ayshwarya\Downloads\Health-App-main\data\cancer.csv")
 df.drop(df.columns[[0,-1]], axis=1, inplace=True)
 # Split the features data and the target 
 Xdata = df.drop(['diagnosis'], axis=1)
@@ -34,4 +34,4 @@ print("---------------------")
 print(clf_report)
 print("_____________________")
 
-joblib.dump(model,r"C:\Users\Mahesh Sharma\Desktop\HealthApp\Indivisual_Deployment\Breast\cancer_model.pkl")
+joblib.dump(model,r"C:\Users\ayshwarya\Downloads\Health-App-main\Breast_Cancer API\cancer_model.pkl")

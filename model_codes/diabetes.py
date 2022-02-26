@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import joblib
 
-df = pd.read_csv(r"C:\Users\Mahesh Sharma\Desktop\HealthApp\data\diabetes.csv")
+df = pd.read_csv(r"C:\Users\ayshwarya\Downloads\Health-App-main\data\diabetes.csv")
 
 df['Glucose'].replace(0, np.nan, inplace=True)
 df['BloodPressure'].replace(0, np.nan, inplace=True)
@@ -43,4 +43,4 @@ print("---------------------")
 print(clf_report)
 print("_____________________")
 
-joblib.dump(model,r"C:\Users\Mahesh Sharma\Desktop\HealthApp\Indivisual_Deployment\Diabetes_API\diabetes_model.pkl")
+joblib.dump(model,r"CC:\Users\ayshwarya\Downloads\Health-App-main\Diabetes_API\diabetes_model.pkl")

@@ -9,12 +9,12 @@ app = Flask(__name__, template_folder='templates')
 
 @app.route("/cancer")
 def cancer():
-    return render_template(r"C:\Users\ayshwarya\Downloads\Health-App-main\Breast_Cancer API\cancer_model.pkl")
+    return render_template("cancer.html")
 
 def ValuePredictor(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1,size)
     if(size==5):
-        loaded_model = joblib.load('cancer_model.pkl')
+        loaded_model = joblib.load(r"C:\Users\ayshwarya\Downloads\Health-App-main\Breast_Cancer API\cancer_model.pkl")
         result = loaded_model.predict(to_predict)
     return result[0]
 
@@ -32,7 +32,7 @@ def predict():
         prediction = "Sorry you chances of getting the disease. Please consult the doctor immediately"
     else:
         prediction = "No need to fear. You have no dangerous symptoms of the disease"
-    return(render_template(r"C:\Users\ayshwarya\Downloads\Health-App-main\Breast_Cancer API\templates\result.html", prediction_text=prediction))       
+    return(render_template("result.html", prediction_text=prediction))       
 
 if __name__ == "__main__":
     app.run(debug=True)

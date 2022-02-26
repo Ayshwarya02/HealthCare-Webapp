@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import joblib
 
-df = pd.read_csv("../data/heart.csv")
+df = pd.read_csv(r"C:\Users\ayshwarya\Downloads\Health-App-main\data\heart.csv")
 
 categorical_val = []
 continous_val = []
@@ -38,4 +38,4 @@ print("---------------------")
 print(clf_report)
 print("_____________________")
 
-joblib.dump(model,r"C:\Users\Mahesh Sharma\Desktop\HealthApp\Indivisual_Deployment\Heart_API\heart_model.pkl")
+joblib.dump(model,r"C:\Users\ayshwarya\Downloads\Health-App-main\Heart_API\heart_model.pkl")
